@@ -119,5 +119,5 @@ app.post('/api/jobs', async (req, res) => {
 
 // Start the server
 app.listen(port, () => {
-    console.log(`Server running at http://51.20.189.219:${port}`);
+    console.log(`Server running at http://13.60.244.180:${port}`);
 });
