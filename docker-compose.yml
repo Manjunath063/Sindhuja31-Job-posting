@@ -5,7 +5,7 @@ services:
     container_name: job-posting-backend
     build: ./Backend
     ports:
-      - "3015:3015"
+      - "3206:3206"
     depends_on:
       - postgres
     environment:
@@ -19,7 +19,7 @@ services:
     container_name: job-posting-employee
     build: ./Employee-posting
     ports:
-      - "8025:80"
+      - "8011:80"
     depends_on:
       - backend
 
@@ -27,7 +27,7 @@ services:
     container_name: job-posting-hr
     build: ./HR-posting
     ports:
-      - "8026:80"
+      - "8012:80"
     depends_on:
       - backend
 
@@ -35,7 +35,7 @@ services:
     container_name: job-posting-db
     image: postgres:13
     ports:
-      - "5410:5432"
+      - "5206:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
