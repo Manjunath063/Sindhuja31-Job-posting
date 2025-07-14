@@ -16,7 +16,7 @@ services:
       - PGDATABASE=job_portal
 
   employee-posting:
-    container_name: job-posting-employee
+    container_name: job-posting-employee1
     build: ./Employee-posting
     ports:
       - "8011:80"
